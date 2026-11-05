@@ -53,6 +53,7 @@ The final architecture will be determined by literature findings and experimenta
 - Successfully executed tensor computations on the GPU.
 
 **Development environment:**
+
 - OS: Ubuntu Linux
 - Python: 3.10.12
 - PyTorch: 2.14.1
@@ -65,12 +66,13 @@ Implemented introductory experiments to understand the building blocks of Deep L
 
 | File | Implementation |
 |---|---|
-| `day1_gpu_test.py` | GPU tensor creation and matrix multiplication |
-| `tensor_test.py` | Tensor creation, shape, data type, and value inspection |
-| `cnn_intro.py` | 2D convolution, edge detection, feature maps, and padding |
-| `first_cnn.py` | Basic CNN architecture using PyTorch |
+| `01_day1_gpu_test.py` | GPU tensor creation and matrix multiplication |
+| `02_tensor_test.py` | Tensor creation, shape, data type, and value inspection |
+| `03_cnn_intro.py` | 2D convolution, edge detection, feature maps, and padding |
+| `04_first_cnn.py` | Basic CNN architecture using PyTorch |
 
 Topics explored:
+
 - Tensor representation and dimensions.
 - CPU and GPU computation.
 - CUDA availability.
@@ -81,16 +83,17 @@ Topics explored:
 
 ### Phase 3: Neural Network Learning and Optimization
 
-Implemented small experiments to understand how neural networks learn.
+Implemented experiments to understand how neural networks learn.
 
 | File | Implementation |
 |---|---|
-| `loss_experiment.py` | Prediction scores and CrossEntropyLoss |
-| `backprop_test.py` | Gradient calculation using PyTorch autograd |
-| `gradient_descent.py` | Manual gradient descent and parameter updates |
-| `adam_test.py` | Neural network optimization using Adam |
+| `05_loss_experiment.py` | Prediction scores and CrossEntropyLoss |
+| `06_backprop_test.py` | Gradient calculation using PyTorch autograd |
+| `07_gradient_descent.py` | Manual gradient descent and parameter updates |
+| `08_adam_test.py` | Neural network optimization using Adam |
 
 Concepts explored:
+
 - Trainable weights and biases.
 - Logits and loss functions.
 - CrossEntropyLoss and MSELoss.
@@ -106,10 +109,11 @@ Developed a synthetic image classification experiment to understand the complete
 
 | File | Implementation |
 |---|---|
-| `dataloader_test.py` | Dataset creation, batching, and DataLoader |
-| `train_cnn.py` | CNN training, validation, and evaluation experiment |
+| `09_dataloader_test.py` | Dataset creation, batching, and DataLoader |
+| `10_train_cnn.py` | CNN training, validation, and evaluation experiment |
 
 **Synthetic dataset details:**
+
 - Total images: 200.
 - Image dimensions: 64 × 64.
 - Channels: 3 (RGB).
@@ -120,6 +124,7 @@ Developed a synthetic image classification experiment to understand the complete
 - Batch size: 16.
 
 **CNN architecture:**
+
 - Conv2D: 3 → 16 channels.
 - ReLU activation.
 - Max pooling.
@@ -132,6 +137,7 @@ Developed a synthetic image classification experiment to understand the complete
 - Output layer: 128 → 2.
 
 **Training configuration:**
+
 - Optimizer: Adam.
 - Learning rate: 0.001.
 - Loss function: CrossEntropyLoss.
@@ -139,6 +145,7 @@ Developed a synthetic image classification experiment to understand the complete
 - Device: CUDA GPU when available.
 
 **Observed experiment results:**
+
 - Training loss converged to approximately zero.
 - Validation loss converged to approximately zero.
 - Training accuracy: 100% on the synthetic training set.
@@ -185,35 +192,33 @@ Potential benchmark datasets include:
 
 Dataset selection and preprocessing strategies will be finalized after reviewing dataset availability, licensing, and research requirements.
 
-## 8. Planned Project Structure
+## 8. Project Structure
 
 ```text
 deepfake-detection/
 │
-├── README.md
-├── requirements.txt
-├── .gitignore
-│
-├── day1_gpu_test.py
-├── tensor_test.py
-├── cnn_intro.py
-├── first_cnn.py
-├── loss_experiment.py
-├── backprop_test.py
-├── gradient_descent.py
-├── adam_test.py
-├── dataloader_test.py
-├── train_cnn.py
+├── experiments/
+│   ├── 01_day1_gpu_test.py
+│   ├── 02_tensor_test.py
+│   ├── 03_cnn_intro.py
+│   ├── 04_first_cnn.py
+│   ├── 05_loss_experiment.py
+│   ├── 06_backprop_test.py
+│   ├── 07_gradient_descent.py
+│   ├── 08_adam_test.py
+│   ├── 09_dataloader_test.py
+│   └── 10_train_cnn.py
 │
 ├── data/                  # Dataset storage (not committed)
 ├── src/                   # Reusable project modules
-├── experiments/           # Experimental scripts
 ├── results/               # Evaluation outputs
 ├── app/                   # Application interface
-└── docs/                  # Research documentation
+├── docs/                  # Research documentation
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
-
-The structure will evolve as the project moves from foundational experiments to the complete implementation.
 
 ## 9. Future Work
 
